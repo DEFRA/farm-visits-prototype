@@ -42,7 +42,11 @@ router.get('/examples/over-18', function (req, res) {
 // add your routes here
 
 router.all('/upload', function (req, res) {
-  res.render('upload/index', { 'form_action' : '/upload-file' });
+  res.render('upload/index', { 'form_action' : '/upload/progress' });
+});
+
+router.all('/upload/progress', function (req, res) {
+  res.render('upload/progress', { 'form_action' : '/upload-file' });
 });
 
 
