@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function (req, res) {
-  
+
   res.render('index');
 
 });
@@ -40,5 +40,30 @@ router.get('/examples/over-18', function (req, res) {
 });
 
 // add your routes here
+
+router.all('/upload', function (req, res) {
+  res.render('upload/index', { 'form_action' : '/upload/progress' });
+});
+
+router.all('/upload/progress', function (req, res) {
+  res.render('upload/progress');
+});
+
+router.all('/upload/success', function (req, res) {
+  res.render('upload/success', { 'form_action' : '/update' });
+});
+
+router.all('/upload/failure', function (req, res) {
+  res.render('upload/failure', { 'form_action' : '/upload-file' });
+});
+
+router.all('/update', function (req, res) {
+  res.render('update/index');
+});
+
+router.all('/update/success', function (req, res) {
+  res.render('update/success', { 'form_action' : '/upload' });
+});
+
 
 module.exports = router;

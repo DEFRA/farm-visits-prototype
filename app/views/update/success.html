@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% set main_title = "Database updated successfully" %}
+
+{% block page_title %}
+  {{ main_title }}
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        {{ main_title }}
+      </h1>
+
+      <dl style="margin-top: 60px;">
+        <dt>
+          List of farm visits was updated successfully on
+        </dt>
+        <dd class="bold-medium" style="margin: 10px 0 40px 0">
+          1 April 2016 10:00am
+        </dd>
+        <dd>
+
+      <ul class="list list-bullet">
+        <li>
+          <strong class="bold-small">100</strong> records have been created
+        </li>
+        <li>
+          <strong class="bold-small">100</strong> records have been updated
+        </li>
+        <li>
+          <strong class="bold-small">100</strong> records statuses have been updated
+        </li>
+      </ul>
+      <p>
+        <a href="#" class="font-small">Download latest report - 2000 records (CSV 10mb)</a>
+      </p>
+
+      <form class="form" method="get" action="{{form_action}}" style="margin: 30px 0;">
+
+
+          <input class="button" type="submit" value="Upload new CSV file">
+
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
