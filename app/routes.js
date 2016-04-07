@@ -62,7 +62,7 @@ router.all('/update', function (req, res) {
 });
 
 router.all('/update/success', function (req, res) {
-  res.render('update/success');
+  res.render('update/success', { 'form_action' : '/upload' });
 });
 
 
