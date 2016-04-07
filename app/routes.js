@@ -46,7 +46,23 @@ router.all('/upload', function (req, res) {
 });
 
 router.all('/upload/progress', function (req, res) {
-  res.render('upload/progress', { 'form_action' : '/upload-file' });
+  res.render('upload/progress');
+});
+
+router.all('/upload/success', function (req, res) {
+  res.render('upload/success', { 'form_action' : '/update' });
+});
+
+router.all('/upload/failure', function (req, res) {
+  res.render('upload/failure', { 'form_action' : '/upload-file' });
+});
+
+router.all('/update', function (req, res) {
+  res.render('update/index');
+});
+
+router.all('/update/success', function (req, res) {
+  res.render('update/success');
 });
 
 
