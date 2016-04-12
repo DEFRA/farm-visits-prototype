@@ -18,27 +18,89 @@
 
       <table>
         <tr>
-          <th>
-            File
-          </th>
-          <th>
-            Status
-          </th>
-        </tr>
-        <tr>
-          <td>
+          <th rowspan="4" valign="top" class="bold-medium">
             report-0001.csv
-          </td>
-          <td>
+          </th>
+          <td colspan="2">
             Successfully uploaded
           </td>
         </tr>
+        <tr>
+          <td colspan="2">
+            <span class="bold-small">5000 valid records</span> ready to go into database
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="bold-small">24 invalid</span> records
+          </td>
+          <td>
+            <a href="">View report</a>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a href="">Delete report-0001.csv</a>
+          </td>
+        </tr>
+        <tr>
+          <th rowspan="4" valign="top" class="bold-medium">
+            report-0002.csv
+          </th>
+          <td colspan="2">
+            Successfully uploaded
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <span class="bold-small">400 valid records</span> ready to go into database
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <span class="bold-small">0 invalid</span> records
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a href="">Delete report-0002.csv</a>
+          </td>
+        </tr>
+        <tr>
+          <th rowspan="4" valign="top" class="bold-medium">
+            report-0003.csv
+          </th>
+          <td colspan="2">
+            Successfully uploaded
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <span class="bold-small">2900 valid records</span> ready to go into database
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="bold-small">14 invalid</span> records
+          </td>
+          <td>
+            <a href="">View report</a>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <a href="">Delete report-0003.csv</a>
+          </td>
+        </tr>
       </table>
+      <p style="margin: 30px 0 0 0;">
+        <a href="/upload/index">Add another file upload</a>
+      </p>
 
       <form class="form" method="get" action="{{form_action}}" style="margin: 30px 0;">
 
 
-          <input class="button" type="submit" value="Update database with new records">
+          <input class="button" type="submit" value="Update database with valid records">
 
 
       </form>
