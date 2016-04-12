@@ -65,13 +65,7 @@ router.all('/update/success', function (req, res) {
   res.render('update/success', { 'form_action' : '/upload' });
 });
 
-router.all('/visittypes/manage', function (req, res) {
-  res.render('/visittypes/manage', { 'form_action' : '/visittypes/confirmation' });
-});
 
-router.all('/visittypes/confirmation', function (req, res) {
-  res.render('/visittypes/confirmation', { 'form_action' : 'index' });
-});
 
 
 module.exports = router;
