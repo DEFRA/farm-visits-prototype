@@ -77,6 +77,13 @@ router.all('/visit-types/change-confirmation', function (req, res) {
   res.render('visit-types/change-confirmation', { 'form_action' : '/visit-types' });
 });
 
+router.all('/visit-types/create-visit-type', function (req, res) {
+  res.render('visit-types/create-visit-type', { 'form_action' : '/visit-types/add-confirmation' });
+});
+
+router.all('/visit-types/add-confirmation', function (req, res) {
+  res.render('visit-types/add-confirmation', { 'form_action' : '/visit-types' });
+});
 
 
 module.exports = router;
