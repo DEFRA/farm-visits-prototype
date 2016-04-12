@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% set main_title = "Confirm change of visit type" %}
+
+{% block page_title %}
+  {{ main_title }}
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        {{ main_title }}
+      </h1>
+
+      <table style="font-size: 16px;">
+        <tr>
+          <th>
+            Visit type
+          </th>
+            <td>
+              Disease surveillance - TB
+            </td>
+        </tr>
+        <tr>
+          <th>
+            Combined visit types
+          </th>
+            <td>
+              <ul class="list-bullet">
+                <li>Combined RPA and APHA Sheep and Goats inspections/survey</li>
+                <li>Disease surveillance - Salmonella National Control Plan</li>
+                <li>Welfare of animals (slaughter or killing) inspection</li>
+                <li>Poultry meat marketing terms inspection</li>
+              </ul>
+            </td>
+        </tr>
+      </table>
+
+
+      <form class="form" method="get" action="{{form_action}}">
+
+
+          <div class="form-group" style="margin: 30px 0 10px 0;">
+            <input class="button" type="submit" value="Change visit type">
+          </div>
+
+      </form>
+            <p>
+              <a href="/visit-types">Cancel</a>
+            </p>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

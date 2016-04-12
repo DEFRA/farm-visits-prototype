@@ -65,6 +65,17 @@ router.all('/update/success', function (req, res) {
   res.render('update/success', { 'form_action' : '/upload' });
 });
 
+router.all('/visit-types', function (req, res) {
+  res.render('visit-types/index', { 'form_action' : '/visit-types/create-visit-type' });
+});
+
+router.all('/visit-types/change-type-example', function (req, res) {
+  res.render('visit-types/change-type-example', { 'form_action' : '/visit-types/change-confirmation' });
+});
+
+router.all('/visit-types/change-confirmation', function (req, res) {
+  res.render('visit-types/change-confirmation', { 'form_action' : '/visit-types' });
+});
 
 
 

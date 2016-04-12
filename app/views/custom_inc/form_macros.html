@@ -1,0 +1,22 @@
+{% macro input(id, name, value, type) %}
+<label for="{{ type }}_{{ id }}" class="block-label">
+  <input id="{{ type }}_{{ id }}" type="{{ type }}" name="{{ name }}" value="{{ value }}">
+  {{ value|safe }}
+</label>
+{% endmacro %}
+
+{% macro radio(id, name, value, type) %}
+<label for="{{ type }}_{{ id }}" class="block-label">
+  <input id="{{ type }}_{{ id }}" type="{{ type }}" name="{{ name }}" value="{{ value }}">
+  <span><span class="inner"></span></span>
+  {{ value|safe }}
+</label>
+{% endmacro %}
+
+{% macro datefield(question, exampledate) %}
+<label class="form-group form-group-day">
+  <span class="visuallyhidden">{{ question }}</span>
+  <p class="form-hint">For example, {{ exampledate }}</p>
+  <input type="text" class="form-control date_input" id="start-date" name="date" />
+</label>
+{% endmacro %}

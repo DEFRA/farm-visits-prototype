@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% set main_title = "Change visit type" %}
+
+{% block page_title %}
+  {{ main_title }}
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        {{ main_title }}
+      </h1>
+<h2 class="font-medium" style="margin: 0 0 30px 0; color: grey;">
+    Disease surveillance - TB
+</h2>
+            <form method="post" action="{{form_action}}">
+
+                    <div class="form-group">
+
+                        <label class="form-label" for="first-name">Change visit type name</label>
+                          <input class="form-control" id="first-name" name="first-name" type="text" value="Disease surveillance - TB">
+                        </div>
+
+      <fieldset>
+
+        <legend class="heading-medium">Choose other visit types to combine with this type</legend>
+
+      {% import "custom_inc/form_macros.html" as formelement %}
+
+      {% set visittypes = [
+        { type: "Disease surveillance - TB", id: 1 },
+        { type: "Disease surveillance - Brucellosis (sheep and goats) APHA", id: 2 },
+        { type: "Combined RPA and APHA Sheep and Goats inspections/survey", id: 3 },
+        { type: "Disease surveillance - Salmonella National Control Plan", id: 4 },
+        { type: "Disease surveillance - Avian Influenza", id: 5 },
+        { type: "Welfare of animals (slaughter or killing) inspection", id: 6 },
+        { type: "Animal health and welfare cross compliance inspection", id: 7 },
+        { type: "Poultry meat marketing terms inspection", id: 8 },
+        { type: "Veterinary medicine residue inspection", id: 9 },
+        { type: "Welfare on farms (WOFAR) inspection", id: 10 },
+        { type: "Egg marketing inspection", id: 11 },
+        { type: "Egg hygiene inspection", id: 12 },
+        { type: "National feed audit inspection", id: 13 },
+        { type: "AFUs and other TB-related inspection", id: 14 },
+        { type: "Animal by-products incinerators inspection", id: 15 },
+        { type: "Imported animals inspection", id: 16 },
+        { type: "Animal gatherings inspection", id: 17 },
+        { type: "RPA Cross compliance inspection", id: 18 },
+        { type: "RDPE compliance monitoring inspection", id: 19 },
+        { type: "Basic (was Single) Payment Scheme Land Eligibility Inspection", id: 20 },
+        { type: "Sheep and Goat (SAG) identification inspection", id: 21 },
+        { type: "Cattle identification inspection", id: 22 }
+      ] -%}
+
+      {% for visittype in visittypes %}
+        {{ formelement.input( visittype.id, "visittype", visittype.type, "checkbox") }}
+      {% else %}
+        <p>No visisttypes</p>
+      {% endfor %}
+    </fieldset>
+  </form>
+
+      <form class="form" method="get" action="{{form_action}}">
+
+
+          <div class="form-group" style="margin: 30px 0 10px 0;">
+            <input class="button" type="submit" value="Change visit type details">
+          </div>
+
+      </form>
+            <p>
+              <a href="/visit-type/create">Cancel</a>
+            </p>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
