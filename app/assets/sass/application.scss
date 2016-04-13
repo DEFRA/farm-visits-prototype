@@ -86,3 +86,18 @@ section.upload {
 html {
   background-color: #FFF;
 }
+table.small-font {
+  th {
+  @include bold-16;
+}
+  td {
+  @include core-16;
+}
+
+}
+.hide-list {
+  p {
+    @include bold-16;
+    margin: 0 0 10px 0;
+  }
+}

@@ -93,14 +93,20 @@
 
     {% block content %}{% endblock %}
 
-    
+
 
     <!--end footer-->
 
     <div id="global-app-error" class="app-error hidden"></div>
 
     <script src="{{ asset_path }}javascripts/govuk-template.js?0.16.4" type="text/javascript"></script>
-
     {% block body_end %}{% endblock %}
+
+    <script type="text/javascript">
+      $( ".hide-list" ).hide();
+      $( ".list-toggle" ).click(function() {
+        $( ".hide-list" ).toggle();
+      });
+    </script>
   </body>
 </html>
