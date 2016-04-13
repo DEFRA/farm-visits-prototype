@@ -85,5 +85,9 @@ router.all('/visit-types/add-confirmation', function (req, res) {
   res.render('visit-types/add-confirmation', { 'form_action' : '/visit-types' });
 });
 
+router.all('/visit-types/delete', function (req, res) {
+  res.render('visit-types/delete-confirmation', { 'form_action' : '/visit-types' });
+});
+
 
 module.exports = router;
